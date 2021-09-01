@@ -10,9 +10,10 @@ body {
 
 
 .container-main {
-  width: 500px;
+  padding-top: 20px;
+  max-width: 500px;
   margin: 0 auto;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   text-align: center;
 }
 
@@ -54,9 +55,21 @@ body {
   box-shadow: 5px 5px 19px 5px rgba(0,0,0,0.39);
 }
 
+.paper {
+  border: 10px solid rgb(70, 109, 236);
+}
+
+
+.rock {
+  border: 10px solid rgb(236, 76, 70);
+}
+
 .active {
   border: 10px solid green;
   background: rgb(176, 214, 154);
+  width: 130px;
+  height: 130px;
+
 }
 
 .action {
@@ -74,7 +87,10 @@ body {
 /* Buttons */
 
 .btn {
-  padding: 10px 15px;
+  padding: 12px 30px;
+  background: #fff;
+  border: none;
+  border-radius: 7px;
 }
 
 .result {

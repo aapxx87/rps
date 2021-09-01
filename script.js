@@ -35,7 +35,7 @@ circles.forEach(function (circle) {
 
     circle.classList.add('active')
 
-    console.log(playerChoise);
+    // console.log(playerChoise);
 
   })
 
@@ -61,8 +61,8 @@ btnNextPlayer.addEventListener('click', function () {
   btnResult.style.display = 'inline-block'
 
 
-  console.log(player);
-  console.log(playersArr);
+  // console.log(player);
+  // console.log(playersArr);
 
 })
 
