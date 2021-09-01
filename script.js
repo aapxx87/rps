@@ -63,6 +63,8 @@ btnNextPlayer.addEventListener('click', function () {
 
   btnResult.style.display = 'inline-block'
 
+  document.body.style.background = 'linear-gradient(to right, #485563, #29323c)'
+
 
   // console.log(player);
   // console.log(playersArr);
@@ -73,6 +75,8 @@ btnNextPlayer.addEventListener('click', function () {
 
 
 btnResult.addEventListener('click', function () {
+
+  document.body.style.background = 'linear-gradient(to right, #e52d27, #b31217)'
 
   circles.forEach(function (circle) {
     circle.classList.remove('active')
@@ -89,8 +93,6 @@ btnResult.addEventListener('click', function () {
 
 
   btnRestart.style.display = 'inline-block'
-
-  // playerWinner.style.display = 'inline-block'
 
 
 
@@ -140,6 +142,9 @@ btnResult.addEventListener('click', function () {
 
 
 btnRestart.addEventListener('click', function () {
+
+
+  document.body.style.background = 'linear-gradient(#1f3756, #141539)'
 
   circles.forEach(function (circle) {
     circle.classList.remove('end')
