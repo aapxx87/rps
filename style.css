@@ -47,14 +47,28 @@ body {
   justify-content: center;
   width: 110px;
   height: 110px;
-  border: 10px solid green;
+  border: 10px solid rgb(214, 145, 18);
   border-radius: 50%;
   background: cornsilk;
+  transition: .3s;
+  box-shadow: 5px 5px 19px 5px rgba(0,0,0,0.39);
+}
+
+.active {
+  border: 10px solid green;
+  background: rgb(176, 214, 154);
 }
 
 .action {
   width: 40px;
   height: 50px;
+}
+
+.end {
+  border: 10px solid rgb(139, 139, 139);
+  background: rgb(206, 211, 204);
+  width: 90px;
+  height: 90px;
 }
 
 /* Buttons */

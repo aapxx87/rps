@@ -23,9 +23,17 @@ circles.forEach(function (circle) {
 
   circle.addEventListener('click', function () {
 
+    circles.forEach(function (circle) {
+      circle.classList.remove('active')
+    })
+
+
+
     const circleClass = circle.classList[1]
 
     playerChoise = circleClass
+
+    circle.classList.add('active')
 
     console.log(playerChoise);
 
@@ -36,6 +44,10 @@ circles.forEach(function (circle) {
 
 // Step 2 - 
 btnNextPlayer.addEventListener('click', function () {
+
+  circles.forEach(function (circle) {
+    circle.classList.remove('active')
+  })
 
   playersArr.push(playerChoise)
 
@@ -59,6 +71,15 @@ btnNextPlayer.addEventListener('click', function () {
 
 btnResult.addEventListener('click', function () {
 
+  circles.forEach(function (circle) {
+    circle.classList.remove('active')
+  })
+
+
+  circles.forEach(function (circle) {
+    circle.classList.add('end')
+  })
+
   playersArr.push(playerChoise)
 
   btnResult.style.display = 'none'
@@ -69,17 +90,44 @@ btnResult.addEventListener('click', function () {
 
 
   if (playersArr[0] === 'paper' && playersArr[1] === 'paper') {
-    titlePlayer.textContent = 'Ничья: Paper VS Paper'
-    console.log('Ничья');
+    titlePlayer.textContent = 'Ничья'
   } else if (playersArr[0] === 'paper' && playersArr[1] === 'scissors') {
-    titlePlayer.textContent = 'Player 2 win: Paper VS Scissors'
-    console.log('Player 2 win');
+    titlePlayer.textContent = 'Player 2 win: Paper <- Scissors'
   } else if (playersArr[0] === 'paper' && playersArr[1] === 'rock') {
-    titlePlayer.textContent = 'Player 1 win: Paper VS Rock'
-
-    console.log('Player 1 win');
+    titlePlayer.textContent = 'Player 1 win: Paper -> Rock'
+  } else if (playersArr[0] === 'scissors' && playersArr[1] === 'scissors') {
+    titlePlayer.textContent = 'Ничья'
+  } else if (playersArr[0] === 'scissors' && playersArr[1] === 'rock') {
+    titlePlayer.textContent = 'Player 2 win: Scissors <- Rock'
+  } else if (playersArr[0] === 'scissors' && playersArr[1] === 'paper') {
+    titlePlayer.textContent = 'Player 1 win: Scissors -> Paper'
+  } else if (playersArr[0] === 'rock' && playersArr[1] === 'rock') {
+    titlePlayer.textContent = 'Ничья'
+  } else if (playersArr[0] === 'rock' && playersArr[1] === 'scissors') {
+    titlePlayer.textContent = 'Player 1 win: Rock -> Scissors'
+  } else if (playersArr[0] === 'rock' && playersArr[1] === 'paper') {
+    titlePlayer.textContent = 'Player 2 win: Rock <- Paper'
   }
 
+
+})
+
+
+btnRestart.addEventListener('click', function () {
+
+  circles.forEach(function (circle) {
+    circle.classList.remove('end')
+  })
+
+  titlePlayer.textContent = 'Player 1'
+
+  playersArr.splice(0, 2)
+
+  btnRestart.style.display = 'none'
+
+  btnNextPlayer.style.display = 'inline-block'
+
+  console.log(playersArr);
 
 })
 
