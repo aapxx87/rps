@@ -76,7 +76,7 @@ btnNextPlayer.addEventListener('click', function () {
 
 btnResult.addEventListener('click', function () {
 
-  document.body.style.background = 'linear-gradient(to right, #e52d27, #b31217)'
+  document.body.style.background = 'linear-gradient(to right, #41295a, #2f0743)'
 
   circles.forEach(function (circle) {
     circle.classList.remove('active')

@@ -8,6 +8,7 @@ body {
   height: 100vh;
   background: linear-gradient(#1f3756, #141539);
   font-family: 'Barlow Semi Condensed', sans-serif;
+  overflow: hidden;
 }
 
 
@@ -108,9 +109,10 @@ body {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
-  border-radius: 7px;
+  border-radius: 15px;
   text-transform: uppercase;
 }
+
 
 .result {
   display: none;
