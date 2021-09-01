@@ -5,12 +5,14 @@
 }
 
 body {
-  background: #1f3756;
+  height: 100vh;
+  background: linear-gradient(#1f3756, #141539);
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 
 .container-main {
-  padding-top: 20px;
+  padding-top: 60px;
   max-width: 500px;
   margin: 0 auto;
   /* border: 1px solid gray; */
@@ -84,13 +86,29 @@ body {
   height: 90px;
 }
 
+.result-winner {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+
+.player-winner {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  /* display: none; */
+}
+
 /* Buttons */
 
 .btn {
-  padding: 12px 30px;
+  width: 200px;
+  padding: 15px 0;
   background: #fff;
   border: none;
   border-radius: 7px;
+  text-transform: uppercase;
 }
 
 .result {

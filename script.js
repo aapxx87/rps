@@ -6,6 +6,7 @@ const btnResult = document.querySelector('.result')
 const btnRestart = document.querySelector('.restart')
 
 const titlePlayer = document.querySelector('.game-player')
+const playerWinner = document.querySelector('.player-winner')
 
 const circles = document.querySelectorAll('.circle')
 
@@ -15,6 +16,8 @@ const playersArr = []
 let player = 1
 
 let playerChoise = ''
+
+
 
 
 
@@ -87,27 +90,50 @@ btnResult.addEventListener('click', function () {
 
   btnRestart.style.display = 'inline-block'
 
+  // playerWinner.style.display = 'inline-block'
+
 
 
   if (playersArr[0] === 'paper' && playersArr[1] === 'paper') {
     titlePlayer.textContent = 'Ничья'
+    playerWinner.textContent = `None - restart please!`
   } else if (playersArr[0] === 'paper' && playersArr[1] === 'scissors') {
-    titlePlayer.textContent = 'Player 2 win: Paper <- Scissors'
+    titlePlayer.textContent = 'Paper VS Scissors'
+    playerWinner.textContent = `Player 2 WIN!`
   } else if (playersArr[0] === 'paper' && playersArr[1] === 'rock') {
-    titlePlayer.textContent = 'Player 1 win: Paper -> Rock'
+    titlePlayer.textContent = 'Paper VS Rock'
+    playerWinner.textContent = `Player 1 WIN!`
   } else if (playersArr[0] === 'scissors' && playersArr[1] === 'scissors') {
     titlePlayer.textContent = 'Ничья'
+    playerWinner.textContent = `None - restart please!`
   } else if (playersArr[0] === 'scissors' && playersArr[1] === 'rock') {
-    titlePlayer.textContent = 'Player 2 win: Scissors <- Rock'
+    titlePlayer.textContent = 'Scissors VS Rock'
+    playerWinner.textContent = `Player 2 WIN!`
   } else if (playersArr[0] === 'scissors' && playersArr[1] === 'paper') {
-    titlePlayer.textContent = 'Player 1 win: Scissors -> Paper'
+    titlePlayer.textContent = 'Scissors VS Paper'
+    playerWinner.textContent = `Player 1 WIN!`
   } else if (playersArr[0] === 'rock' && playersArr[1] === 'rock') {
     titlePlayer.textContent = 'Ничья'
+    playerWinner.textContent = `None - restart please!`
   } else if (playersArr[0] === 'rock' && playersArr[1] === 'scissors') {
-    titlePlayer.textContent = 'Player 1 win: Rock -> Scissors'
+    titlePlayer.textContent = 'Rock VS Scissors'
+    playerWinner.textContent = `Player 1 WIN!`
   } else if (playersArr[0] === 'rock' && playersArr[1] === 'paper') {
-    titlePlayer.textContent = 'Player 2 win: Rock <- Paper'
+    titlePlayer.textContent = 'Rock VS Paper'
+    playerWinner.textContent = `Player 2 WIN!`
   }
+
+
+
+
+  console.log(playersArr);
+
+  document.querySelector('.case3').style.display = 'none'
+
+  document.querySelector('.action-paper').src = `images/icon-${playersArr[0]}.svg`
+  document.querySelector('.action-scissors').src = `images/icon-${playersArr[1]}.svg`
+
+
 
 
 })
@@ -128,6 +154,18 @@ btnRestart.addEventListener('click', function () {
   btnNextPlayer.style.display = 'inline-block'
 
   console.log(playersArr);
+
+  document.querySelector('.case3').style.display = 'flex'
+
+
+  playerWinner.textContent = ''
+
+
+
+
+  document.querySelector('.action-paper').src = `images/icon-paper.svg`
+  document.querySelector('.action-scissors').src = `images/icon-scissors.svg`
+
 
 })
 
